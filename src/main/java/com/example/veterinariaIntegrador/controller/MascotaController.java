@@ -19,7 +19,7 @@ public class MascotaController {
     public MascotaController(MascotaService mascotaService) {
         this.mascotaService = mascotaService;
     }
-
+    @GetMapping
     public List<Mascota> listarMascotas(){return mascotaService.listarMascotas();}
 
     @RequestMapping("/{id}")

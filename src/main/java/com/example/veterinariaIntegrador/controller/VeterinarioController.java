@@ -14,6 +14,10 @@ import java.util.List;
 public class VeterinarioController {
     VeterinarioService veterinarioService;
 
+    public VeterinarioController(VeterinarioService veterinarioService) {
+        this.veterinarioService = veterinarioService;
+    }
+
     @GetMapping
     public List<Veterianrio> findAll() {
         return veterinarioService.listarVeterinarios();
